@@ -1,0 +1,11 @@
+{
+  "name": "coffeerun",
+  "version": "1.0.0",
+  "description": "A Coffee shopping cart application",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server --files \"stylesheets/*.css, scripts/*.js, *.html\""
+  },
+  "author": "Alexander Melo",
+  "license": "MIT"
+}
