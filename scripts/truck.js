@@ -21,6 +21,19 @@
     this.db.remove(customerId);
   }
 
+  // Print orders
+  Truck.prototype.printOrders = function() {
+    // Returns an array containing only the keys
+    const customerIdArray = Object.keys(this.db.getAll());
+    let self = this;
+
+    console.log('Truck #' + this.truckId + ' has pending orders:');
+    // Loops and prints out the trucks orders
+    customerIdArray.forEach(function(id) {
+      console.log(self.db.get(id));
+    });
+  }
+
   App.Truck = Truck;
   window.App = App;
 
