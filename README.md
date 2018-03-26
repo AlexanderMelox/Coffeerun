@@ -1,4 +1,4 @@
-# Cofferun 
+# Coffeerun 
 
 A shopping cart app for coffee orders. 
 
