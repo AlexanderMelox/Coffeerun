@@ -1,14 +1,14 @@
-(function(window) {
+(function (window) {
   'use strict';
-  const formSelector = '[data-coffee-order="form"]';
-  const App = window.App;
-  const Truck = App.Truck;
-  const DataStore = App.DataStore;
-  const FormHandler = App.FormHandler;
-  const myTruck = new Truck('ncc-1701', new DataStore());
+  var FORM_SELECTOR = '[data-coffee-order="form"]';
+  var App = window.App;
+  var Truck = App.Truck;
+  var DataStore = App.DataStore;
+  var FormHandler = App.FormHandler;
+  var myTruck = new Truck('ncc-1701', new DataStore());
   window.myTruck = myTruck;
-  const formHandler = new FormHandler(formSelector);
-  
-  FormHandler.addSubmitHandler();
+  var formHandler = new FormHandler(FORM_SELECTOR);
+
+  formHandler.addSubmitHandler(myTruck.createOrder.bind(myTruck));
   console.log(formHandler);
 })(window);

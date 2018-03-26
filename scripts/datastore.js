@@ -1,29 +1,31 @@
-(function(window) {
+(function (window) {
   'use strict';
-  const App = window.app || {};
 
-  // DataStore constuctor
+  var App = window.App || {};
+
   function DataStore() {
+    console.log('running the DataStore function')
     this.data = {};
   }
 
-  // Add a new value to the data
-  DataStore.prototype.add = function(key, val) {
+  DataStore.prototype.add = function (key, val) {
     this.data[key] = val;
-  }
+  };
 
-  DataStore.prototype.get = function(val) {
-    return this.data[val];
-  }
+  DataStore.prototype.get = function (key) {
+    return this.data[key];
+  };
 
-  DataStore.prototype.getAll = function() {
+  DataStore.prototype.getAll = function () {
     return this.data;
-  }
+  };
 
-  DataStore.prototype.remove = function(key) {
+  DataStore.prototype.remove = function (key) {
     delete this.data[key];
-  }
+  };
 
   App.DataStore = DataStore;
   window.App = App;
 })(window);
+
+
