@@ -1,8 +1,8 @@
 (function (window) {
   'use strict';
 
-  var App = window.App || {};
-  var $ = window.jQuery;
+  const App = window.App || {};
+  const $ = window.jQuery;
 
   function FormHandler(selector) {
     if (!selector) {
@@ -20,7 +20,7 @@
     this.$formElement.on('submit', function (event) {
       event.preventDefault();
 
-      var data = {};
+      const data = {};
       $(this).serializeArray().forEach(function (item) {
         data[item.name] = item.value;
         console.log(item.name + ' is ' + item.value);

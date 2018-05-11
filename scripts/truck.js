@@ -1,6 +1,6 @@
 (function (window) {
   'use strict';
-  var App = window.App || {};
+  const App = window.App || {};
 
   function Truck(truckId, db) {
     this.truckId = truckId;
@@ -18,7 +18,7 @@
   };
 
   Truck.prototype.printOrders = function () {
-    var customerIdArray = Object.keys(this.db.getAll());
+    const customerIdArray = Object.keys(this.db.getAll());
 
     console.log('Truck #' + this.truckId + ' has pending orders:');
     customerIdArray.forEach(function (id) {

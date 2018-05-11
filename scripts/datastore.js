@@ -1,7 +1,7 @@
 (function (window) {
   'use strict';
 
-  var App = window.App || {};
+  const App = window.App || {};
 
   function DataStore() {
     console.log('running the DataStore function')
